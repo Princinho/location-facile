@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 2px var(--clr-light-shadow);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+nav li{
+    margin-right: 2em;
+    font-weight: 600;
+}
+.nav-link{
+    letter-spacing: .05rem;
+}
+.nav-link a{
+    padding-block: 2rem;
+    padding-inline: .5rem;
+    text-decoration: none;
+    color: var(--clr-grey);
+}
+.nav-link a:active{
+    color: var(--clr-green);
+}
+.logo{
+    min-width: 20%;
+    padding-left: 2rem;
+}
+.nav-links,.nav-right{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.nav-right a{
+    padding: .2rem;
+    margin-inline:.5rem;
+}

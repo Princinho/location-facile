@@ -1,0 +1,57 @@
+.search-result{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    background-color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+.search-result-bookmark{
+position: absolute;
+top: 1rem;
+right: 1rem;
+color: var(--clr-orange);
+background: none;
+border: none;
+}
+.search-result-image{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+.search-result-details{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+.search-result-title{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.search-result-adress{
+    margin-bottom: 1rem;
+}
+.search-result-conveniences{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.search-result-convenience{
+    display: flex;
+    background-color: var(--clr-white-pale);
+    color: var(--clr-grey);
+    width: fit-content;
+    border-radius: .5em;
+    min-width: 40px;
+    justify-content: center;
+    gap: 1rem;
+    padding: .2rem .4rem;
+}
+.search-result-price-tag{
+    color: var(--clr-green);
+    font-weight: bold;
+    font-size: 1.1rem;
+}

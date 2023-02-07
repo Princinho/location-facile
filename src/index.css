@@ -1,0 +1,36 @@
+:root{
+    
+/* 
+#F8F8FA pale white
+#797D80 grey
+#D6E5E6 whitened green
+#303030 dark grey
+#587A82 pale green
+#095550 green
+#FF5A04 orange
+ */
+    --clr-orange:#FF5A04;
+    --clr-white-pale:#F8F8FA; 
+    --clr-grey:#797D80; 
+    --clr-text:#323232;
+    --clr-grey-dark:#303030; 
+    --clr-green:#095550; 
+    --clr-green-light:#D6E5E6; 
+    --clr-green-pale:#587A82; 
+    --clr-light-shadow: #3534343d;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    color: var(--clr-text);
+}
+.action-button{
+    cursor: pointer;
+}
+.action-button:hover,.action-button:focus{
+    opacity: .9;
+}

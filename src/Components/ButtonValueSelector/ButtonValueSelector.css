@@ -1,0 +1,35 @@
+.button-value-selector{
+    display: flex;
+    width: fit-content;
+    background-color: var(--clr-white-pale);
+    padding: .2rem;
+}
+.button-value-selector button{
+    background-color: var(--clr-green-light);
+    color: var(--clr-green);
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .2rem;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.button-value-selector input{
+    text-align: center;
+    padding-inline:.2rem;
+    border: none;
+    background-color: var(--clr-white-pale);
+}
+
+/* Chrome, Safari, Edge, Opera */
+.button-value-selector input::-webkit-outer-spin-button,
+.button-value-selector input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.button-value-selector input[type=number] {
+  -moz-appearance: textfield;
+}

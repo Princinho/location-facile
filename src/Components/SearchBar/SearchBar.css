@@ -1,0 +1,21 @@
+
+.nav-search-bar{
+    display: inline-block;
+    min-width: 100%;
+    background-color: #F8F8FA;
+    border: none;
+    padding: 1em;
+    border-radius: .2em;
+    padding-left: 2rem;
+}
+.search-bar{
+position: relative;
+width: 60%;
+}
+.search-icon{
+    position: absolute;
+    left: .5rem;
+    top: 20%;
+    bottom: 0;
+    color: var(--clr-orange);
+}
