@@ -98,3 +98,11 @@
     gap: 1rem;
     overflow-y: scroll;
 }
+.leaflet-container{
+    height: 100%;
+    max-width: 100%;
+
+}
+.leaflet-popup-content-wrapper{
+    width: 500px;
+}

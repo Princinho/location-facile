@@ -6,6 +6,7 @@ import { Box } from "@mui/system";
 import { useState } from "react";
 import ButtonValueSelector from "../Components/ButtonValueSelector/ButtonValueSelector";
 import SearchResult from "../Components/SearchResult/SearchResult";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 export default function Rent(props) {
     const [priceRange, setPriceRange] = useState([50000, 100000])
     const [areaRange, setAreaRange] = useState([1000, 4000])
@@ -137,6 +138,21 @@ export default function Rent(props) {
                     price={"70.000"} />
             </div>
         </section>
-        <section className="map-wrapper">Map</section>
+        <section className="map-wrapper">
+            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[51.505, -0.09]}>
+                    <Popup>
+                    <SearchResult imageUrl={images[1]}
+                    title="Villa Ghana"
+                    adress="354 rue des etrangers, Agoe logope"
+                    price={"70.000"} />
+                    </Popup>
+                </Marker>
+            </MapContainer>
+        </section>
     </div>)
 }
