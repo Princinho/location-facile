@@ -1,0 +1,19 @@
+.rentout-form-wrapper {
+    border: 2px solid var(--clr-green);
+    width: fit-content;
+    padding: 3%;
+    margin: 0 auto;
+}
+
+.rentout-form-wrapper input,.rentout-form-wrapper textarea {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.4em;
+}
+
+.rentout-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .5em;
+}
