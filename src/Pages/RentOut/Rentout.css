@@ -5,10 +5,14 @@
     margin: 0 auto;
 }
 
-.rentout-form-wrapper input,.rentout-form-wrapper textarea {
+.rentout-form-wrapper input,
+.rentout-form-wrapper textarea,
+.rentout-form-wrapper button[type="submit"] {
     width: 100%;
     padding: 1em;
     font-size: 1.4em;
+    border: 1px solid var(--clr-grey);
+
 }
 
 .rentout-form-wrapper form {
@@ -16,4 +20,16 @@
     flex-direction: column;
     align-items: stretch;
     gap: .5em;
+}
+
+.action-button {
+    background-color: var(--clr-green);
+    color: white;
+    border: none;
+    padding: 1em;
+}
+
+.flex-hr {
+    display: flex;
+    justify-content: flex-end;
 }
