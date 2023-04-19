@@ -11,7 +11,7 @@ export default function Layout(props) {
                 <div className="nav-links">
                     <ul>
                         <li className="nav-link"><Link to="">Buy</Link></li>
-                        <li className="nav-link"><Link to="/Rent">Rent</Link></li>
+                        <li className="nav-link"><Link to="Rent">Rent</Link></li>
                         <li className="nav-link"><Link to="">Sell</Link></li>
                         <li className="nav-link"><Link to="">Rent out</Link></li>
                     </ul>
