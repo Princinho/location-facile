@@ -1,11 +1,11 @@
 import "./Rent.css"
 import { ApartmentSharp, BusinessCenterSharp, HouseSharp, TerrainSharp } from "@mui/icons-material";
-import Checkbox from "../Components/Checkbox/Checkbox";
+import Checkbox from "../../Components/Checkbox/Checkbox";
 import { Slider } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
-import ButtonValueSelector from "../Components/ButtonValueSelector/ButtonValueSelector";
-import SearchResult from "../Components/SearchResult/SearchResult";
+import ButtonValueSelector from "../../Components/ButtonValueSelector/ButtonValueSelector";
+import SearchResult from "../../Components/SearchResult/SearchResult";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 export default function Rent(props) {
     const [priceRange, setPriceRange] = useState([50000, 100000])

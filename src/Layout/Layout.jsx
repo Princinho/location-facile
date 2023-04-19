@@ -13,7 +13,7 @@ export default function Layout(props) {
                         <li className="nav-link"><Link to="">Buy</Link></li>
                         <li className="nav-link"><Link to="Rent">Rent</Link></li>
                         <li className="nav-link"><Link to="">Sell</Link></li>
-                        <li className="nav-link"><Link to="">Rent out</Link></li>
+                        <li className="nav-link"><Link to="RentOut">Rent out</Link></li>
                     </ul>
                 </div>
                 <div className='nav-right'>
