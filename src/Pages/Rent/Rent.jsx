@@ -7,9 +7,11 @@ import { useState } from "react";
 import ButtonValueSelector from "../../Components/ButtonValueSelector/ButtonValueSelector";
 import SearchResult from "../../Components/SearchResult/SearchResult";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { data } from "../../Data"
 export default function Rent(props) {
     const [priceRange, setPriceRange] = useState([50000, 100000])
     const [areaRange, setAreaRange] = useState([1000, 4000])
+    console.log('data houses', data)
     const images = [
         "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
         "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
@@ -112,30 +114,16 @@ export default function Rent(props) {
                 </select>
             </div>
             <div className="results-list">
-                <SearchResult imageUrl={images[0]}
-                    title="Villa Agbegnigan"
-                    adress="124 rue des Cocotiers, Agoe Cacaveli"
-                    price={"78.000"} />
-                <SearchResult imageUrl={images[2]}
-                    title="Villa Togotoh"
-                    adress="354 rue des zombies, Agoe zongo"
-                    price={"24.000"} />
-                <SearchResult imageUrl={images[1]}
-                    title="Immeuble le Millionaire"
-                    adress="354 rue de la caisse, Lome-Tokoin"
-                    price={"50.0000"} />
-                <SearchResult imageUrl={images[3]}
-                    title="Immeuble Cdt BALI"
-                    adress="1812 boulevard du 13 Janvier"
-                    price={"90.000"} />
-                <SearchResult imageUrl={images[0]}
-                    title="Maison Dokui"
-                    adress="180 avenue des perdus, Segbe"
-                    price={"20.000"} />
-                <SearchResult imageUrl={images[1]}
-                    title="Villa Ghana"
-                    adress="354 rue des etrangers, Agoe logope"
-                    price={"70.000"} />
+                {data.map(house =>
+                    <SearchResult imageUrl={house.images[0]}
+                        title={house.name}
+                        adress={house.address}
+                        price={house.price.toLocaleString('fr-TG', {style: 'currency', currency: 'XOF'})}
+                        bathroomsCount={house.bathroomsCount}
+                        bedroomsCount={house.bedroomsCount}
+                        surface={house.surface} />)}
+
+
             </div>
         </section>
         <section className="map-wrapper">
@@ -146,10 +134,10 @@ export default function Rent(props) {
                 />
                 <Marker position={[51.505, -0.09]}>
                     <Popup>
-                    <SearchResult imageUrl={images[1]}
-                    title="Villa Ghana"
-                    adress="354 rue des etrangers, Agoe logope"
-                    price={"70.000"} />
+                        <SearchResult imageUrl={images[1]}
+                            title="Villa Ghana"
+                            adress="354 rue des etrangers, Agoe logope"
+                            price={"70.000"} />
                     </Popup>
                 </Marker>
             </MapContainer>
